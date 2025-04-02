@@ -10,7 +10,6 @@ def main():
     #without it we have one flag which is nothing
     #the help is shown when using just the -h flag
     parser.add_argument("-e","--events", type=str, help="github events")
-    parser.add_argument("-e","--events", type=str, help="github events")
     
     
     args = parser.parse_args()

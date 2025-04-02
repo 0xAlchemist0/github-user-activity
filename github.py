@@ -4,6 +4,7 @@ import json
 import requests
 from colorama import Fore, Style
 from colorama import init as colorama_init
+
 from requester import make_request
 
 
@@ -14,7 +15,7 @@ def get_user_events(user_name):
     if (response):
          for values in response:
           date = format_date(values["created_at"])
-          print(f"{Fore.GREEN}{date.month}/{date.day}/{date.year}: {values['repo']['name']}")
+          print(f"{Fore.GREEN}{date.month}/{date.day}/{date.year}:  {values['type']}: {values['repo']['name']}")
     
     else:
       print(f"{Fore.RED}Noe events found or user does not exist!")
